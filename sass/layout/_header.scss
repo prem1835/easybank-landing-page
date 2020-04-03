@@ -1,0 +1,43 @@
+.header-section {
+  background-color: $color-Light-gray;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+
+  &__col-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text-box {
+    width: 65%;
+    &--heading {
+      color: $color-Dark-Blue;
+      font-weight: 300;
+      font-size: 3.5rem;
+    }
+
+    &--para {
+      width: 90%;
+      color: $color-grayish-blue;
+      line-height: 1.6rem;
+      padding: 2rem 0;
+      font-size: 1.1rem;
+    }
+  }
+
+  &__col-2 {
+    height: 100%;
+    background-image: url(../images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -4rem -16.3rem;
+  }
+  &__imgbox {
+    position: absolute;
+    z-index: 0;
+    top: -3rem;
+    right: -8.2rem;
+  }
+}
