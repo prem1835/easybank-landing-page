@@ -8,11 +8,12 @@
 
 body {
   font-family: "Public Sans", sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  font-weight: 300; }
 
 .header-section {
   background-color: #fafafa;
-  height: 90vh;
+  height: 85vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto; }
@@ -74,3 +75,63 @@ body {
   border-radius: 15rem;
   cursor: pointer;
   font-size: inherit; }
+
+.features {
+  background-color: #f3f4f6;
+  padding: 8rem; }
+  .features__textbox--heading {
+    font-size: 2.7rem;
+    font-weight: 300; }
+  .features__textbox--para {
+    width: 55%;
+    padding: 2rem 0;
+    color: #9698a6;
+    line-height: 1.5rem;
+    font-weight: 400;
+    font-size: 1.2rem; }
+  .features__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); }
+
+.col {
+  padding-top: 2.5rem; }
+  .col__heading {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 2rem 0; }
+  .col__para {
+    width: 83%;
+    color: #9698a6;
+    line-height: 1.5rem; }
+
+.articles {
+  background-color: #fafafa;
+  padding: 6rem 9rem; }
+  .articles__heading {
+    font-size: 2.6rem;
+    font-weight: 300;
+    padding-bottom: 3rem; }
+  .articles__row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem; }
+  .articles__card {
+    border-radius: 0.5rem;
+    background-color: #ffffff; }
+    .articles__card--textbox {
+      padding: 1.5rem; }
+    .articles__card--img {
+      width: 100%; }
+    .articles__card--author {
+      padding-bottom: 0.5rem;
+      font-size: x-small;
+      color: #9698a6;
+      display: block; }
+    .articles__card--heading {
+      padding-bottom: 0.5rem;
+      width: 80%;
+      font-size: 1.1rem;
+      font-weight: 300; }
+    .articles__card--para {
+      color: #9698a6;
+      font-size: 0.9rem; }

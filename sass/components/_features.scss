@@ -1,0 +1,40 @@
+.features {
+  background-color: $color-Light-grayish-blue;
+  padding: 8rem;
+  &__textbox {
+    &--heading {
+      font-size: 2.7rem;
+      font-weight: 300;
+    }
+
+    &--para {
+      width: 55%;
+      padding: 2rem 0;
+      color: $color-grayish-blue;
+      line-height: 1.5rem;
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.col {
+  padding-top: 2.5rem;
+  &__img {
+  }
+  &__heading {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 2rem 0;
+  }
+  &__para {
+    width: 83%;
+    color: $color-grayish-blue;
+    line-height: 1.5rem;
+  }
+}

@@ -1,0 +1,46 @@
+.articles {
+  background-color: $color-Light-gray;
+  padding: 6rem 9rem;
+
+  &__heading {
+    font-size: 2.6rem;
+    font-weight: 300;
+    padding-bottom: 3rem;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+  }
+
+  &__card {
+    border-radius: 0.5rem;
+    background-color: $color-white;
+
+    &--textbox {
+      padding: 1.5rem;
+    }
+    &--img {
+      width: 100%;
+    }
+
+    &--author {
+      padding-bottom: 0.5rem;
+      font-size: x-small;
+      color: $color-grayish-blue;
+      display: block;
+    }
+
+    &--heading {
+      padding-bottom: 0.5rem;
+      width: 80%;
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+    &--para {
+      color: $color-grayish-blue;
+      font-size: 0.9rem;
+    }
+  }
+}
