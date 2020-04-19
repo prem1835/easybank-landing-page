@@ -18,6 +18,27 @@
     <title>Easybank landing page</title>
   </head>
   <body>
+    <div class="mobile__navigation">
+      <nav class="navigation">
+        <ul class="nav__ul">
+          <li class="nav__li--list">
+            <a href="#" class="nav__li--link">Home</a>
+          </li>
+          <li class="nav__li--list">
+            <a href="#" class="nav__li--link">About</a>
+          </li>
+          <li class="nav__li--list">
+            <a href="#" class="nav__li--link">Contact</a>
+          </li>
+          <li class="nav__li--list">
+            <a href="#" class="nav__li--link">Blog</a>
+          </li>
+          <li class="nav__li--list">
+            <a href="#" class="nav__li--link">Careers</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <header class="header">
       <nav class="navbar">
         <div class="navbar__logo-box">
@@ -26,6 +47,15 @@
             alt="Easybank logo"
             class="navbar__logo"
           />
+        </div>
+        <div class="mobile__hamburger">
+          <input type="checkbox" id="check" class="checkbox" />
+          <label for="check" class="icon-hamburger"
+            ><img src="./images/icon-hamburger.svg" alt="icon-hamburger"
+          /></label>
+          <label for="check" class="icon-close"
+            ><img src="./images/icon-close.svg" alt="icon-hamburger"
+          /></label>
         </div>
         <ul class="navbar__list">
           <li class="navbar__list--item item-1">
@@ -44,7 +74,7 @@
             <a href="#" class="navbar__list--link">Careers</a>
           </li>
         </ul>
-        <button class="btn">Request Invite</button>
+        <button class="btn nav__btn">Request Invite</button>
       </nav>
       <div class="header-section">
         <div class="header-section__col-1">
@@ -219,21 +249,73 @@
         </div>
       </div>
     </section>
-    <!-- 
-  About Us
-  Contact
-  Blog
-  Careers
-  Support
-  Privacy Policy
-
-  Request Invite
-
-  © Easybank. All Rights Reserved
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__logobox">
+          <img
+            src="./images/logo-footer.svg"
+            alt="logo of Easybank"
+            class="footer__logobox--logo"
+          />
+          <div class="footer__icons">
+            <img
+              src="./images/icon-facebook.svg"
+              alt="facebook Icon"
+              class="footer__icons--icon"
+            />
+            <img
+              src="./images/icon-youtube.svg"
+              alt="Youtube Icon"
+              class="footer__icons--icon"
+            />
+            <img
+              src="./images/icon-twitter.svg"
+              alt="Twitter Icon"
+              class="footer__icons--icon"
+            />
+            <img
+              src="./images/icon-pinterest.svg"
+              alt="Pinterest Icon"
+              class="footer__icons--icon"
+            />
+            <img
+              src="./images/icon-instagram.svg"
+              alt="Instagram Icon"
+              class="footer__icons--icon"
+            />
+          </div>
+        </div>
+        <div class="footer__navigation">
+          <ul class="nav__list">
+            <li class="nav__list--item">
+              <a href="#" class="nav__list--link">About Us</a>
+            </li>
+            <li class="nav__list--item">
+              <a href="#" class="nav__list--link">Contact</a>
+            </li>
+            <li class="nav__list--item">
+              <a href="#" class="nav__list--link">Blog</a>
+            </li>
+          </ul>
+          <ul class="nav__list">
+            <li class="nav__list--item">
+              <a href="#" class="nav__list--link">Careers</a>
+            </li>
+            <li class="nav__list--item">
+              <a href="#" class="nav__list--link">Support</a>
+            </li>
+            <li class="nav__list--item">
+              <a href="#" class="nav__list--link">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__div--wrapper">
+          <button class="btn footer__btn">Request Invite</button>
+          <p class="footer__copyright--text">© Easybank. All Rights Reserved</p>
+        </div>
+      </div>
+      <h4 class="name__text">Challenge By Frontend Mentor Coded By Prem 💖</h4>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>

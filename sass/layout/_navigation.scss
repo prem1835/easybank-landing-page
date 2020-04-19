@@ -3,11 +3,15 @@
   display: grid;
   grid-template-columns: 30% 40% 30%;
   grid-template-rows: auto;
-  padding: 1em;
   justify-items: center;
   align-items: center;
   z-index: 23423;
   position: relative;
+
+  @include respond(phone) {
+    display: block;
+    padding: 1rem;
+  }
 
   &__logo {
     margin-top: 7px;
@@ -18,12 +22,47 @@
     list-style: none;
     grid-gap: 1rem;
 
+    @include respond(phone) {
+      display: none;
+    }
+
     &--link {
       text-decoration: none;
       color: $color-grayish-blue;
+      font-size: 0.9rem;
     }
     &--item {
       text-align: center;
+      padding: 1.5em 0;
+      cursor: pointer;
+      border: 3px solid transparent;
+      border-image-slice: 0 0 1 0;
+      border-width: 5px;
+      border-image-source: linear-gradient(to right, #ffffff, #ffffff);
+
+      &:hover {
+        border-image-source: linear-gradient(to right, #31d35c, #2bb7da);
+      }
     }
+  }
+}
+
+.mobile__navigation {
+  display: none;
+}
+.mobile__hamburger {
+  display: none;
+  @include respond(phone) {
+    display: unset;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+.checkbox,
+.icon-close {
+  @include respond(phone) {
+    display: none;
   }
 }

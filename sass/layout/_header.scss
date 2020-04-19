@@ -5,6 +5,12 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
 
+  @include respond(phone) {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto;
+    height: 90vh;
+  }
+
   &__col-1 {
     display: flex;
     justify-content: center;
@@ -13,10 +19,18 @@
 
   &__text-box {
     width: 65%;
+    @include respond(phone) {
+      text-align: center;
+      width: 90%;
+    }
     &--heading {
       color: $color-Dark-Blue;
       font-weight: 300;
       font-size: 3.5rem;
+
+      @include respond(phone) {
+        font-size: 2.4rem;
+      }
     }
 
     &--para {
@@ -25,6 +39,14 @@
       line-height: 1.6rem;
       padding: 2rem 0;
       font-size: 1.1rem;
+
+      @include respond(phone) {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 0.9rem;
+        padding: 1rem 0;
+        padding-bottom: 1.5rem;
+      }
     }
   }
 
@@ -33,11 +55,32 @@
     background-image: url(../images/bg-intro-desktop.svg);
     background-repeat: no-repeat;
     background-position: -4rem -16.3rem;
+
+    @include respond(phone) {
+      background-image: url(../images/bg-intro-mobile.svg);
+      background-position: 0.3rem -4rem;
+      grid-row-start: 1;
+    }
   }
   &__imgbox {
     position: absolute;
     z-index: 0;
     top: -3rem;
     right: -8.2rem;
+
+    @include respond(phone) {
+      position: unset;
+      top: unset;
+      right: unset;
+    }
+  }
+  &__img {
+    @include respond(phone) {
+      position: absolute;
+      top: -3.7rem;
+      z-index: 0;
+      left: 1.2rem;
+      width: 90%;
+    }
   }
 }

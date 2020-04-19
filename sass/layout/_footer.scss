@@ -1,0 +1,139 @@
+.footer {
+  background-color: $color-Dark-Blue;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    padding: 4rem 9rem;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 2fr 1fr;
+      padding: 2rem;
+      align-items: center;
+      justify-items: center;
+    }
+  }
+
+  &__logobox {
+    @include respond(phone) {
+      text-align: center;
+    }
+    &--logo {
+      width: 7.5rem;
+      padding-bottom: 3rem;
+
+      @include respond(phone) {
+        width: 8rem;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__icons {
+    &--icon {
+      width: 1.5rem;
+      padding-right: 0.5rem;
+      cursor: pointer;
+
+      &:hover {
+        filter: invert(73%) sepia(19%) saturate(1467%) hue-rotate(112deg)
+          brightness(280%) contrast(84%);
+        transition: 0.4s;
+      }
+      @include respond(phone) {
+        padding: 1.5rem 0;
+        padding-right: 0.7rem;
+        width: 2rem;
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-around;
+
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__copyright {
+    &--text {
+      padding-top: 2rem;
+      color: $color-grayish-blue;
+    }
+  }
+
+  &__div--wrapper {
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include respond(phone) {
+      justify-content: center;
+      align-items: center;
+      justify-self: center;
+    }
+  }
+  &__btn {
+    width: 73%;
+
+    &:hover {
+      opacity: 1 !important;
+    }
+    @include respond(phone) {
+      width: 80%;
+      margin: 0 auto;
+      padding: 0.8rem !important;
+      margin-top: 0.7rem;
+    }
+  }
+}
+
+.nav__list {
+  font-size: 0.9rem;
+
+  @include respond(phone) {
+    text-align: center;
+  }
+
+  &--item:not(:last-child) {
+    padding-bottom: 0.9rem;
+  }
+  &--item {
+    @include respond(phone) {
+      padding-bottom: 0.9rem;
+      font-size: 0.85rem;
+    }
+  }
+
+  &--link {
+    text-decoration: none;
+    color: $color-Light-grayish-blue;
+
+    &:hover {
+      color: $color-Green-dark;
+      transition: 0.4s;
+    }
+  }
+}
+
+.name__text {
+  color: $color-grayish-blue;
+  font-weight: 300;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    color: $color-Green-dark;
+    transform: translateY(-20%);
+    transition: 0.3s;
+  }
+  @include respond(phone) {
+    font-size: 0.7rem;
+  }
+}
