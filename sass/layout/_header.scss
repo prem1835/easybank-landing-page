@@ -8,7 +8,11 @@
   @include respond(phone) {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: auto;
-    height: 90vh;
+    height: 88vh;
+  }
+
+  &__nav {
+    filter: brightness(50%);
   }
 
   &__col-1 {

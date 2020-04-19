@@ -9,7 +9,7 @@
   position: relative;
 
   @include respond(phone) {
-    display: block;
+    grid-template-columns: 1fr 1fr;
     padding: 1rem;
   }
 
@@ -24,12 +24,31 @@
 
     @include respond(phone) {
       display: none;
+      position: absolute;
+      top: 5rem;
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-columns: auto;
+      grid-gap: unset;
+      background-color: white;
+      width: 88%;
+      border-radius: 0.6rem;
+      padding: 1rem 0;
     }
 
+    &--active {
+      @include respond(phone) {
+        display: block;
+      }
+    }
     &--link {
       text-decoration: none;
       color: $color-grayish-blue;
       font-size: 0.9rem;
+
+      @include respond(phone) {
+        font-size: 1rem;
+        color: inherit;
+      }
     }
     &--item {
       text-align: center;
@@ -42,27 +61,28 @@
 
       &:hover {
         border-image-source: linear-gradient(to right, #31d35c, #2bb7da);
+        width: 25%;
+        margin: 0 auto;
+      }
+      @include respond(phone) {
+        padding: 0.3rem 0;
       }
     }
   }
 }
 
-.mobile__navigation {
-  display: none;
-}
-.mobile__hamburger {
+.mobile-nav {
   display: none;
   @include respond(phone) {
-    display: unset;
+    display: block;
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
+    right: 1.7rem;
   }
 }
-
-.checkbox,
 .icon-close {
   @include respond(phone) {
-    display: none;
+    position: absolute;
+    width: 60%;
+    opacity: 0;
   }
 }

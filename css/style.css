@@ -7,6 +7,11 @@
   overflow-x: hidden;
   text-decoration: none;
   list-style-type: none; }
+  @media only screen and (max-width: 37.5em) {
+    *,
+    *::after,
+    *::before {
+      overflow-x: unset; } }
 
 body {
   font-family: "Public Sans", sans-serif;
@@ -125,7 +130,9 @@ body {
     .header-section {
       grid-template-rows: 1fr 1fr;
       grid-template-columns: auto;
-      height: 90vh; } }
+      height: 88vh; } }
+  .header-section__nav {
+    filter: brightness(50%); }
   .header-section__col-1 {
     display: flex;
     justify-content: center;
@@ -195,7 +202,7 @@ body {
   position: relative; }
   @media only screen and (max-width: 37.5em) {
     .navbar {
-      display: block;
+      grid-template-columns: 1fr 1fr;
       padding: 1rem; } }
   .navbar__logo {
     margin-top: 7px; }
@@ -206,11 +213,27 @@ body {
     grid-gap: 1rem; }
     @media only screen and (max-width: 37.5em) {
       .navbar__list {
-        display: none; } }
+        display: none;
+        position: absolute;
+        top: 5rem;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: auto;
+        grid-gap: unset;
+        background-color: white;
+        width: 88%;
+        border-radius: 0.6rem;
+        padding: 1rem 0; } }
+    @media only screen and (max-width: 37.5em) {
+      .navbar__list--active {
+        display: block; } }
     .navbar__list--link {
       text-decoration: none;
       color: #9698a6;
       font-size: 0.9rem; }
+      @media only screen and (max-width: 37.5em) {
+        .navbar__list--link {
+          font-size: 1rem;
+          color: inherit; } }
     .navbar__list--item {
       text-align: center;
       padding: 1.5em 0;
@@ -220,24 +243,26 @@ body {
       border-width: 5px;
       border-image-source: linear-gradient(to right, #ffffff, #ffffff); }
       .navbar__list--item:hover {
-        border-image-source: linear-gradient(to right, #31d35c, #2bb7da); }
+        border-image-source: linear-gradient(to right, #31d35c, #2bb7da);
+        width: 25%;
+        margin: 0 auto; }
+      @media only screen and (max-width: 37.5em) {
+        .navbar__list--item {
+          padding: 0.3rem 0; } }
 
-.mobile__navigation {
-  display: none; }
-
-.mobile__hamburger {
+.mobile-nav {
   display: none; }
   @media only screen and (max-width: 37.5em) {
-    .mobile__hamburger {
-      display: unset;
+    .mobile-nav {
+      display: block;
       position: absolute;
-      top: 1.5rem;
-      right: 1.5rem; } }
+      right: 1.7rem; } }
 
 @media only screen and (max-width: 37.5em) {
-  .checkbox,
   .icon-close {
-    display: none; } }
+    position: absolute;
+    width: 60%;
+    opacity: 0; } }
 
 .btn {
   color: #ffffff;
