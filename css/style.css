@@ -191,6 +191,14 @@ body {
       left: 1.2rem;
       width: 90%; } }
 
+@media only screen and (max-width: 1000px) {
+  .header-section__img {
+    display: none; } }
+
+@media only screen and (max-width: 600px) {
+  .header-section__img {
+    display: unset; } }
+
 .navbar {
   background-color: white;
   display: grid;
